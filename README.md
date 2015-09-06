@@ -10,6 +10,15 @@ __Mozilla Firefox__: Install [Greasemonkey](https://addons.mozilla.org/en-us/fir
 
 Other browsers are not supported, and most likely will never be.
 
+## TODO
+
+* DLC batch purchase support
+* Bundle purchase support
+* Proper pre-order support
+* Disable button if not logged in
+* Option for re-enabling button for not refundable items
+* Status dialog needs polishing
+
 ## License
 
 The MIT License (MIT)
