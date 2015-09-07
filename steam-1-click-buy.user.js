@@ -278,7 +278,7 @@ function main () {
 
       if (subId != null) {
         var button = $(
-          '<a class="btnv6_green_white_innerfade btn_medium oneclick-button" href="#">' +
+          '<a class="btnv6_blue_blue_innerfade btn_medium oneclick-button" href="#">' +
             '<span>1-Click Buy</span>' +
           '</a>'
         );
@@ -317,28 +317,16 @@ script.appendChild(document.createTextNode('('+ main +')();'));
 
 var style = document.createElement('style');
 style.innerHTML = 
-  '.oneclick-delim { margin: 0 10px; display: inline-block; font-size: 14px; }' +
-  '.btnv6_green_white_innerfade.oneclick-button {' +
-    'color: #d0cbcb !important;' +
-    /* Permalink - use to edit and share this gradient:
-    http://colorzilla.com/gradient-editor/#066a99+5,032863+95 */
-    'background: #066a99; /* Old browsers */' +
-    'background: -moz-linear-gradient(top,  #066a99 5%, #032863 95%); /* FF3.6+ */' +
-    'background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#066a99), color-stop(95%,#032863)); /* Chrome,Safari4+ */' +
-    'background: -webkit-linear-gradient(top,  #066a99 5%,#032863 95%); /* Chrome10+,Safari5.1+ */' +
-    'background: -o-linear-gradient(top,  #066a99 5%,#032863 95%); /* Opera 11.10+ */' +
-    'background: linear-gradient(to bottom,  #066a99 5%,#032863 95%); /* W3C */' +
+  '.oneclick-delim {' +
+    'margin: 0 10px;' +
+    'display: inline-block;' +
+    'font-size: 14px;' +
   '}' +
-  '.btnv6_green_white_innerfade.oneclick-button:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {' +
+  '.btnv6_blue_blue_innerfade.oneclick-button {' +
+    'color: #d0cbcb !important;' +
+  '}' +
+  '.btnv6_blue_blue_innerfade.oneclick-button:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {' +
     'color: #ffffff !important;' +
-    /* Permalink - use to edit and share this gradient:
-    http://colorzilla.com/gradient-editor/#0875c9+5,053589+95 */
-    'background: #0875c9; /* Old browsers */' +
-    'background: -moz-linear-gradient(top,  #0875c9 5%, #053589 95%); /* FF3.6+ */' +
-    'background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#0875c9), color-stop(95%,#053589)); /* Chrome,Safari4+ */' +
-    'background: -webkit-linear-gradient(top,  #0875c9 5%,#053589 95%); /* Chrome10+,Safari5.1+ */' +
-    'background: -o-linear-gradient(top,  #0875c9 5%,#053589 95%); /* Opera 11.10+ */' +
-    'background: linear-gradient(to bottom,  #0875c9 5%,#053589 95%); /* W3C */' +
   '}' +
   '.game_area_purchase_not_refundable {' +
     'height: 36px;' +
