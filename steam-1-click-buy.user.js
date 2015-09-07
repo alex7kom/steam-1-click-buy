@@ -267,8 +267,8 @@ function main () {
 
     $('.game_area_purchase_game_wrapper').each(function (i, gameWrapper) {
       if (
-        forceForNonRefundable
-        || $(gameWrapper).find('.game_area_purchase_not_refundable').length > 0
+        forceForNonRefundable ||
+        $(gameWrapper).find('.game_area_purchase_not_refundable').length > 0
       ) {
         $(gameWrapper).find('.game_area_purchase_not_refundable').append(
           $('<br/><span>1-Click Buy is not available.</span>')
@@ -276,9 +276,10 @@ function main () {
         return;
       }
       var subId = $(gameWrapper).find('form input[name="subid"]').val();
-
+      
+      var button;
       if (subId != null) {
-        var button = $(
+        button = $(
           '<a class="btnv6_blue_blue_innerfade btn_medium oneclick-button" href="#">' +
             '<span>1-Click Buy</span>' +
           '</a>'
