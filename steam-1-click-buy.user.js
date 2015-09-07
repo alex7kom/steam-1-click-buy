@@ -237,24 +237,25 @@ function main () {
   }
 
   function finalizeTransaction () {
-    if (localStorage.getItem('1click') === 'true') {
-      localStorage.removeItem('1click');
-      if ($('#review_tab')[0].style.display !== 'block') {
-        closeStatusModal();
-        changeMessage(
-          '1-Click Buy is unsuccessful. ' +
-          'Please proceed as a regular order.'
-        );
-        return;
-      }
-      changeStatus('Finalizing the transaction');
-      $('#accept_ssa').attr('checked', 'checked');
-      FinalizeTransaction();
-      waitForReceipt();
+    if ($('#review_tab')[0].style.display !== 'block') {
+      closeStatusModal();
+      changeMessage(
+        '1-Click Buy is unsuccessful. ' +
+        'Please proceed as a regular order.'
+      );
+      return;
     }
+    changeStatus('Finalizing the transaction');
+    $('#accept_ssa').attr('checked', 'checked');
+    FinalizeTransaction();
+    waitForReceipt();
   }
 
   function do1ClickPhaseThree () {
+    if (localStorage.getItem('1click') !== 'true') {
+      return;
+    }
+    localStorage.removeItem('1click');
     createStatusModal();
     waitForStartTransaction();
   }
