@@ -280,9 +280,11 @@ function main () {
       var button;
       if (subId != null) {
         button = $(
-          '<a class="btnv6_blue_blue_innerfade btn_medium oneclick-button" href="#">' +
-            '<span>1-Click Buy</span>' +
-          '</a>'
+          '<div class="btn_addtocart">' +
+            '<a class="btnv6_blue_blue_innerfade btn_medium oneclick-button" href="#">' +
+              '<span>1-Click Buy</span>' +
+            '</a>' +
+          '</div>'
         );
         button.on('click', do1ClickPhaseOne.bind(null, subId));
       } else {
