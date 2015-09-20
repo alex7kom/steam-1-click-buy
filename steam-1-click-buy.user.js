@@ -183,7 +183,7 @@ function main () {
     openInstallDialog();
   }
 
-  function openInstallDialog() {
+  function openInstallDialog () {
     changeStatus('Installing');
     var installLink = $('#gotsteam_buttons a').attr('href');
     window.location.href = installLink;
@@ -278,7 +278,7 @@ function main () {
       var subId = $(gameWrapper).find('form input[name="subid"]').val();
       
       var button;
-      if (subId != null) {
+      if (subId) {
         button = $(
           '<div class="btn_addtocart">' +
             '<a class="btnv6_blue_blue_innerfade btn_medium oneclick-button" href="#">' +
