@@ -4,7 +4,7 @@
 // @include        https://store.steampowered.com/*
 // @description    Adds a button for purchasing games in one click using Steam Wallet funds
 // @author         Alex7Kom
-// @version        0.2
+// @version        0.3.0
 // @grant          none
 // ==/UserScript==
 
