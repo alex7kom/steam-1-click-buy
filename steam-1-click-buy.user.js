@@ -11,6 +11,7 @@
 (function () {
 
 function main () {
+  var debug = !!localStorage.getItem('1click_debug');
   var forceForNonRefundable = false;
 
   var $ = jQuery;
@@ -296,6 +297,12 @@ function main () {
       $(addToCartButton).parent().append(button);
     });
 
+  }
+
+  function log () {
+    if (!debug) return;
+
+    console.log.apply(console, arguments);
   }
 
   var pathname = window.location.pathname;
