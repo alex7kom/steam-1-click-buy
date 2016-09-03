@@ -268,6 +268,13 @@ function main () {
 
     $('.game_area_purchase_game_wrapper').each(function (i, gameWrapper) {
       if (
+        $(gameWrapper).find('form').length > 0
+        && $($(gameWrapper).find('form')[0]).attr('action') == 'http://store.steampowered.com/checkout/addfreelicense/'
+      ) {
+        log('Free license');
+        return;
+      }
+      if (
         forceForNonRefundable ||
         $(gameWrapper).find('.game_area_purchase_not_refundable').length > 0
       ) {
