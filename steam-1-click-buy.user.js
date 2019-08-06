@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name           Steam 1-Click Buy Button
-// @include        http://store.steampowered.com/*
 // @include        https://store.steampowered.com/*
 // @description    Adds a button for purchasing games in one click using Steam Wallet funds
 // @author         Alex7Kom
-// @version        0.3.0
+// @version        0.4.0
 // @grant          none
 // ==/UserScript==
 
@@ -67,7 +66,7 @@
 
     function removeFromCart (itemId, callback) {
       $.ajax({
-        url: 'http://store.steampowered.com/cart/',
+        url: 'https://store.steampowered.com/cart/',
         type: 'POST',
         data: {
           action: 'remove_line_item',
@@ -85,7 +84,7 @@
 
     function addToCart (itemIds, callback) {
       $.ajax({
-        url: 'http://store.steampowered.com/cart/',
+        url: 'https://store.steampowered.com/cart/',
         type: 'POST',
         data: {
           action: 'add_to_cart',
@@ -103,7 +102,7 @@
 
     function getCurrentCart (callback) {
       $.ajax({
-        url: 'http://store.steampowered.com/cart/',
+        url: 'https://store.steampowered.com/cart/',
         type: 'GET',
         success: function (data) {
           callback(null, data);
@@ -280,7 +279,7 @@
 
         if (
           form.length
-          && $(form[0]).attr('action') === 'http://store.steampowered.com/checkout/addfreelicense/'
+          && $(form[0]).attr('action') === 'https://store.steampowered.com/checkout/addfreelicense/'
         ) {
           log('Free license');
 
